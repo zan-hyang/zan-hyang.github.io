@@ -1,0 +1,472 @@
+/* 폰트 */
+@font-face {
+	font-family: "NeoL";
+	src: url("font/AppleSDGothicNeoL.ttf");
+}
+
+@font-face {
+	font-family: "NeoSB";
+	src: url("font/AppleSDGothicNeoSB.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap');
+
+@font-face {
+	font-family: 'NotoKR', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700&display=swap');
+
+@font-face {
+	font-family: 'NotoKR', sans-serif;
+}
+
+
+/* 선택 색상 */
+::selection { background:red; color:#fff; }
+
+/* 전체 */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: "NotoKR"; position:relative; }
+body::-webkit-scrollbar {
+	width: 10px;
+	background:rgba(0,0,0,0);
+}
+body::-webkit-scrollbar-thumb {
+	background:skyblue;
+	border-radius: 50px;
+}
+body::-webkit-scrollbar-track {
+	background: #dbdbdb;
+}
+ol,ul { list-style:none; }
+a { text-decoration:none !important; color:inherit !important; }
+h1,h2,h3,h4,h5,h6 { font-weight:normal; }
+i, img { cursor:pointer; }
+
+.f   { display:flex; }
+
+.fs  { display:flex; justify-content:flex-start; }
+.fc  { display:flex; justify-content:center; }
+.fe  { display:flex; justify-content:flex-end; }
+.fw  { display:flex; justify-content:space-between; }
+
+.fas { display:flex; align-items:flex-start; }
+.fac { display:flex; align-items:center; }
+.fae { display:flex; align-items:flex-end; }
+
+.fd  { display:flex; flex-direction:column; }
+.fww { display:flex; flex-wrap:wrap; }
+
+.title {
+	font-weight:600;
+	font-size:40px;
+	color:#25cfc3;
+	font-family: "NotoKR";
+}
+.text { color:#474747; font-size:15px; margin-top:20px; }
+.sub-title { color:#353535; font-size:18px; }
+.section__line { width:100%; margin:80px 0; }
+.section__line hr { width:20%; }
+
+#scrollVal {
+	position:fixed;
+	top:0; left:0;
+	width:0%;
+	height:5px;
+	background:skyblue;
+}
+
+/* 헤더 */
+/*
+.visual { width:100%; height:900px; overflow:hidden; position:relative; }
+	.visual__visual { position:relative; }
+	.visual__visual img {
+		position:absolute;
+		right:0;
+		height:900px;
+	}
+	.visual__textWrapper {
+		width: 100%;
+		height: 100%;
+	}
+	.visual__text h1 {
+		font-size: 65px;
+		text-align:left;
+		font-family: "NotoKR";
+		font-weight: bold;
+	}
+	.visual__text span {
+		font-weight: bold;
+		color: #ff0000;
+	}
+
+	.visual__pol {
+		clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+	}
+
+	.flip { height: 100px; overflow: hidden; }
+		.flip > div > div {
+			color: #fff;
+			padding: 4px 12px;
+			height: 80px;
+			margin-bottom: 25px;
+			display: inline-block;
+		}
+		.flip div:first-child { animation: show 5s linear infinite; }
+		.flip div div { background:#53ff73; }
+		.flip div:first-child div { background:#52d1ff; }
+		.flip div:last-child div { background:#ff204d; }
+
+	@keyframes show {
+		0% {margin-top:-270px;}
+		5% {margin-top:-180px;}
+		33% {margin-top:-180px;}
+		38% {margin-top:-90px;}
+		66% {margin-top:-90px;}
+		71% {margin-top:0px;}
+		99.99% {margin-top:0px;}
+		100% {margin-top:-270px;}
+	}
+
+	.visual__circle {
+		position: absolute;
+		top: -100px; left: -100px;
+		width: 600px;
+		height: 600px;
+		border-radius: 100%;
+		z-index: -1;
+		background:linear-gradient(to bottom, #febbbb 0%,#fe9090 45%,#ff5c5c 100%);;
+		animation: upDown1 6s linear infinite;
+		transition: .1s;
+	}
+
+	@keyframes upDown1 {
+		0% { top:-100px; }
+		20% { top:-110px; }
+		50% { top:-100px; }
+		80% { top:-110px; }
+		100% { top:-100px; }
+	}
+	
+	.visual__circle-small {
+		position: absolute;
+		top: 150px; left: 200px;
+		width: 500px;
+		height: 500px;
+		border: 45px solid #46b3ff;
+		border-radius: 100%;
+		opacity: .7;
+		z-index: -1;
+		animation: upDown2 4.5s linear infinite;
+		transition: .1s;
+	}
+
+	@keyframes upDown2 {
+		0% { top:150px; }
+		20% { top:160px; }
+		50% { top:150px; }
+		80% { top:160px; }
+		100% { top:150px; }
+	}
+
+	.visual__circle-semi {
+		position: absolute;
+		top: 650px; left: 200px;
+		width: 80px;
+		height: 80px;
+		background: linear-gradient(to right, #46ff53, #baffbf);
+		border-radius: 100%;
+		animation: upDown3 3s linear infinite;
+		transition: .1s;
+	}
+
+	@keyframes upDown3 {
+		0% { top:650px; }
+		20% { top:660px; }
+		50% { top:650px; }
+		80% { top:660px; }
+		100% { top:650px; }
+	}
+
+*/
+	.header .container {
+		position:absolute;
+		width:100%; height:900px;
+		top:0; left:-50%; right:-50%;
+	}
+	.nav__menu { width:100%; }
+	.nav__menuGroup { width:50%; margin-top:30px; color:#fff !important; }
+	.nav__menuGroup span {
+		position:relative;
+		font-size:20px;
+		transition:.3s;
+	}
+	.nav__menuGroup span::after {
+		content:"";
+		display:block;
+		height:3px;
+		background-color:skyblue;
+		position:absolute;
+		left:51%; right:51%;
+		bottom:-3px;
+		transition:.3s;
+	}
+	.nav__menuGroup a:hover { font-weight:bold; color:#fff !important; }
+	.nav__menuGroup a:hover span::after { left:1%; right:1%; }
+
+	.nav__menu img { width:70px; }
+
+.visual { width:100%; height:900px; overflow:hidden; position:relative; }
+	.visual__visualCover {
+		width:100%;
+		height:100%;
+		background:#000;
+		opacity:.2;
+		position:absolute;
+		left:0; top:0;
+	}
+	.visual__visual img { width:100%; }
+	.visual__textBox {
+		height:100px;
+		font-size:3rem;
+		text-align:center;
+		color:#fff;
+	}
+
+/* 플로팅 메뉴*/
+.floatingMenu { position:fixed; left:100px; top:50%; z-index:100; width:128px; margin:-220px 0 0 0; }
+	.floatingMenu li { list-style:circle; }
+	.floatingMenu a {
+		display:block;
+		width:123px;
+		padding:10px 0;
+		color:#111 !important;
+	}
+
+	.floatingMenu li:hover { transform:scale(1.1); transition:.3s; }
+	.floatingMenu li:hover a {
+		color:skyblue !important;
+		font-weight:500;
+	}
+
+/* about */
+.about { width:100%; height:auto; margin-bottom:100px; }
+	.about__section-text { margin:100px 0 50px 0; }
+
+	.about__Box { width:100%; }
+	.about__imgbox {
+		width:35%;
+		height: 480px;
+		border-radius: 20px;
+		background-image: url(../images/6.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-right:80px;
+		overflow:hidden;
+	}
+	.about__content { width: 100%; margin-bottom:30px; }
+	.about__rightBox { width: 100%; }
+	.about__profile { width: 50%; }
+	.about__content h4 {
+		font-size: 25px;
+		font-family: "NotoKR";
+		font-weight:bold;
+		margin-bottom: 20px;
+	}
+	.about__profile span { font-weight:bold; }
+	.about__license { width: 50%; }
+	.about__license span { font-weight:bold; }
+	.about__skill { display:block; width: 100%; }
+    
+
+    .zt-skill-bar {
+        color: #fff;
+        font-size: 11px;
+        line-height: 25px;
+        height: 25px;
+        margin-bottom: 5px;
+        background-color: rgba(0,0,0,0.1);
+        border-radius: 2px;
+    }
+
+    .zt-skill-bar * {
+       transition: all 0.5s ease;
+    }
+
+    .zt-skill-bar div {
+        background-color:skyblue;
+        position: relative;
+        padding-left: 25px;
+        width: 0;
+        border-radius: 2px;
+    }
+
+    .zt-skill-bar span {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        padding: 0 5px 0 10px;
+        background-color: #1a1a1a;
+        border-radius: 0 2px 2px 0;
+    }
+
+    .zt-skill-bar span:before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: 50%;
+        left: -3px;
+        margin-top: -3px;
+        background-color: #1a1a1a;
+        transform: rotate(45deg);
+    }
+
+/* 포트폴리오 */
+.portfolio { width:100%; height:auto; }
+	.portfolio__section-text { text-align:center; }
+	.portfolio__box-wrap { margin-top:50px; }
+	.portfolio__box-bigWrapper {
+		position: absolute;
+		display: none;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.5);
+		z-index: 100;
+	}
+	.portfolio__box-big img { width:600px; }
+
+	.portfolio__box {
+		width:350px;
+		height:auto;
+		background:#fff;
+		border-radius:10px;
+		box-shadow:10px 10px 10px #dbdbdb;
+		padding:30px 20px;
+		margin-bottom:30px;
+	}
+	.portfolio__box-img p {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		font-size: 30px;
+		font-weight: bold;
+		padding: calc(100%/2.2) 0;
+	}
+	#logo .portfolio__box:nth-child(3) .portfolio__box-img {
+		background-color:#dbdbdb;
+	}
+	.portfolio__box:nth-child(8) .portfolio__box-img {
+		display:flex;
+		justify-content:center;
+		align-items: center;
+	}
+	.portfolio__box-img {
+		position:relative;
+		max-width:310px;
+		height:300px;
+		background:#fff;
+		margin-bottom:30px;
+		overflow:hidden;
+	}
+	.portfolio__box-img img { width:100%; }
+	.portfolio__box-text { height:auto; }
+
+	
+	/* button */	
+	.portfolio__box-btn {
+		width:100%;
+		height:40px;
+		margin-top:15px;
+		transition: all 0.5s;
+		border: none;
+		position: relative;
+	}
+	.portfolio__box-btn::before {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		content: '상세 이미지';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		background-color: skyblue;
+		transition: all 0.3s;
+		color: #fff;
+	}
+	.portfolio__box-btn:hover::before {
+		opacity: 0 ;
+		transform: scale(0.5,0.5);
+	}
+	.portfolio__box-btn::after {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		content: '보러가기';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: 0;
+		transition: all 0.3s;
+		color: #fff;
+		background:skyblue;
+		border: 1px solid skyblue;
+		transform: scale(1.2,1.2);
+	}
+	.portfolio__box-btn:hover::after {
+		opacity: 1;
+		transform: scale(1,1);
+	}
+
+/* 푸터 */
+.contact { width:100%; height:400px; text-align:center; }
+	.contact h1 {
+		font-family: "NotoKR";
+		text-align:center;
+		font-weight: bold;
+		color: #25cfc3;
+		margin-bottom: 30px;
+	}
+	.contact span {
+		font-weight: bold;
+	}
+	.contact__textWrapper {
+		width:100%;
+		font-size: 20px;
+		margin-bottom: 50px;
+	}
+	.contact__img {
+		width:200px;
+		height:200px;
+		overflow: hidden;
+		border-radius: 100%;
+	}
+	.contact__img img { width:100%; }
+	.contact__img:hover {
+		transition:.5s;
+		transform: scale(1.1);
+	}
+	.contact__text {
+		width: 40%;
+	}
+	.copyright {
+		width: 100%;
+		height: 40px;
+		background: #25cfc3;
+		color: #fff;
+		margin-top: 50px;
+	}
+	.copyright p { margin:0; }
+
+@media (max-width:480px) {
+	.header { width:100%; }
+}
